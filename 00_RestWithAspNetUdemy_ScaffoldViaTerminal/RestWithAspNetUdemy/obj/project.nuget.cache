@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "jPsxQ70WpNjUg5j4N3fSita5fX0O0suff/TdbDWDdEdyDcxzwzF3GCnB/42DdFeh/kLoqY0GpiZUib+ZR37LgA==",
+  "success": true,
+  "projectFilePath": "D:\\Curso RestAPI\\RestWithAspNetErudio8\\RestWithAspNet8\\RestWithAspNetUdemy\\RestWithAspNetUdemy\\RestWithAspNetUdemy.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Igor Marques\\.nuget\\packages\\microsoft.aspnetcore.openapi\\8.0.1\\microsoft.aspnetcore.openapi.8.0.1.nupkg.sha512",
+    "C:\\Users\\Igor Marques\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "C:\\Users\\Igor Marques\\.nuget\\packages\\microsoft.openapi\\1.4.3\\microsoft.openapi.1.4.3.nupkg.sha512",
+    "C:\\Users\\Igor Marques\\.nuget\\packages\\swashbuckle.aspnetcore\\6.4.0\\swashbuckle.aspnetcore.6.4.0.nupkg.sha512",
+    "C:\\Users\\Igor Marques\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.4.0\\swashbuckle.aspnetcore.swagger.6.4.0.nupkg.sha512",
+    "C:\\Users\\Igor Marques\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.4.0\\swashbuckle.aspnetcore.swaggergen.6.4.0.nupkg.sha512",
+    "C:\\Users\\Igor Marques\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.4.0\\swashbuckle.aspnetcore.swaggerui.6.4.0.nupkg.sha512"
+  ],
+  "logs": []
+}
