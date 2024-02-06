@@ -4,6 +4,7 @@ using RestWithAspNetUdemy.Repository;
 using RestWithAspNetUdemy.Services;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
+using System.Security.Principal;
 
 namespace RestWithAspNetUdemy.Business.Implementations
 {
@@ -29,7 +30,7 @@ namespace RestWithAspNetUdemy.Business.Implementations
             var claims = new List<Claim> {
 
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString("N")),
-                new Claim(JwtRegisteredClaimNames.UniqueName, user.Username)
+                new Claim(JwtRegisteredClaimNames.UniqueName, user.UserName)
             };
 
             var accessToken = _tokenService.GenerateAccessToken(claims);
@@ -49,6 +50,37 @@ namespace RestWithAspNetUdemy.Business.Implementations
                 expirationDate.ToString(DATE_FORMAT),
                 accessToken,
                 refreshToken);
+        }
+
+        public TokenVO ValidateCredential(TokenVO token)
+        {
+            var accessToken = token.AccessToken;
+            var refreshToken = token.RefreshToken;
+            var principal = _tokenService.GetPrincipalFromExpiredToken(accessToken);
+            var username = principal.Identity.Name;
+            var user = _userRepository.ValidateCredential(username);
+
+            if (user == null 
+                || user.RefreshToken != refreshToken
+                || user.RefreshTokenExpiryTime <= DateTime.Now) return null;
+
+            accessToken = _tokenService.GenerateAccessToken(principal.Claims);
+            refreshToken = _tokenService.GenerateRefreshToken();
+            user.RefreshToken = refreshToken;
+            DateTime createDate = DateTime.Now;
+            DateTime expirationDate = createDate.AddMinutes(_configuration.Minutes);
+
+            return new TokenVO(
+                true,
+                createDate.ToString(DATE_FORMAT),
+                expirationDate.ToString(DATE_FORMAT),
+                accessToken,
+                refreshToken);
+        }
+
+        public bool RevokeToken(string username)
+        {
+            return _userRepository.RevokeToken(username);
         }
     }
 }

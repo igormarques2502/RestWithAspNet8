@@ -38,6 +38,14 @@ namespace RestWithAspNetUdemy.Hypermedia.Enricher
 
             content.Links.Add(new HyperMediaLink()
             {
+                Action = HttpActionVerb.Patch,
+                Href = link,
+                Rel = RelationType.self,
+                Type = ResponseTypeFormat.DefaultPatch
+            });
+
+            content.Links.Add(new HyperMediaLink()
+            {
                 Action = HttpActionVerb.Delete,
                 Href = link,
                 Rel = RelationType.self,

@@ -16,6 +16,7 @@ namespace RestWithAspNetUdemy.Data.Converter.Implementations
                 LastName = origin.LastName,
                 Gender = origin.Gender,
                 Address = origin.Address,
+                Enabled = origin.Enabled
 
             };
         }
@@ -30,7 +31,7 @@ namespace RestWithAspNetUdemy.Data.Converter.Implementations
                 LastName = origin.LastName,
                 Gender = origin.Gender,
                 Address = origin.Address,
-
+                Enabled = origin.Enabled
             };
         }
 

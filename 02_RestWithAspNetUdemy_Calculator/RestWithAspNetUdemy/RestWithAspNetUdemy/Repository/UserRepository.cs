@@ -17,10 +17,15 @@ namespace RestWithAspNetUdemy.Repository
             _context = context;
         }
 
-        public User? ValidateCredential(UserVO user)
+        public User ValidateCredential(UserVO user)
         {
             var pass = ComputeHash(user.Password, SHA256.Create());
-            return _context.Users.FirstOrDefault(u => (u.Username == user.UserName) && u.Password == pass);
+            return _context.Users.FirstOrDefault(u => u.UserName == user.UserName && u.Password == pass);
+        }
+
+        public User ValidateCredential(string username)
+        {
+            return _context.Users.SingleOrDefault(u => u.UserName == username);
         }
 
         public User? RefreshUserInfo(User user)
@@ -44,6 +49,15 @@ namespace RestWithAspNetUdemy.Repository
             return result;
         }
 
+        public bool RevokeToken(string username)
+        {
+            var user = _context.Users.SingleOrDefault(u => (u.UserName == username));
+            if (user == null) return false;
+            user.RefreshToken = null;
+            _context.SaveChanges();
+            return true;
+        }
+
         private string ComputeHash(string input, HashAlgorithm algorithm)
         {
             Byte[] inputBytes = Encoding.UTF8.GetBytes(input);
@@ -58,5 +72,7 @@ namespace RestWithAspNetUdemy.Repository
 
             return sBuilder.ToString();
         }
+
+
     }
 }

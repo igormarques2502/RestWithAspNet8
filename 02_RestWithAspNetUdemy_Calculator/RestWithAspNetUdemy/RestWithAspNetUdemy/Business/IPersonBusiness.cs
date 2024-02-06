@@ -8,6 +8,8 @@ namespace RestWithAspNetUdemy.Services
         PersonVO FindById(long Id);
         List<PersonVO> FindAll();
         PersonVO Update(PersonVO person);
+        PersonVO Disable(long id);
         void Delete(long Id);
+        
     }
 }

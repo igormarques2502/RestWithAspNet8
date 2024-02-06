@@ -7,10 +7,10 @@ namespace RestWithAspNetUdemy.Services.Implementations
 {
     public class PersonBusiness : IPersonBusiness
     {
-        private readonly IRepository<Person> _repository;
+        private readonly IPersonRepository _repository;
         private readonly PersonConverter _converter;
 
-        public PersonBusiness(IRepository<Person> repository)
+        public PersonBusiness(IPersonRepository repository)
         {
             _repository = repository;
             _converter = new PersonConverter();
@@ -39,9 +39,18 @@ namespace RestWithAspNetUdemy.Services.Implementations
             return _converter.Parse(personEntity);
         }
 
+        //Method responsible for disable a person from ID
+        public PersonVO Disable(long id)
+        {
+            var personEntity = _repository.Disable(id);
+            return _converter.Parse(personEntity);
+        }
+
         public void Delete(long Id)
         {
             _repository.Delete(Id);
         }
+
+        
     }
 }
