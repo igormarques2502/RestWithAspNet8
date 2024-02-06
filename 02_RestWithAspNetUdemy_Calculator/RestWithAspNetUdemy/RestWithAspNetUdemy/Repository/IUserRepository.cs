@@ -5,12 +5,12 @@ namespace RestWithAspNetUdemy.Repository
 {
     public interface IUserRepository
     {
-        User ValidateCredential(UserVO user);
+        User? ValidateCredential(UserVO user);
 
-        User ValidateCredential(string username);
+        User? ValidateCredential(string username);
 
         bool RevokeToken(string username);
 
-        User RefreshUserInfo(User user);
+        User? RefreshUserInfo(User user);
     }
 }

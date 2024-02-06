@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RestWithAspNetUdemy")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cef6d0b2969a858d43a11e017691a3799de12a16")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+723ac5126a29023bea5a0f1e702b81f2bfce2f3b")]
 [assembly: System.Reflection.AssemblyProductAttribute("RestWithAspNetUdemy")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RestWithAspNetUdemy")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -8,7 +8,7 @@ using RestWithAspNetUdemy.Model;
 namespace RestWithAspNetUdemy.Controllers
 {
     [ApiVersion("1")]
-    [Authorize("Bearer")]
+    
     [Route("api/[controller]/v{version:apiVersion}")]
     [ApiController]
     public class AuthController : ControllerBase
@@ -43,6 +43,7 @@ namespace RestWithAspNetUdemy.Controllers
         }
 
         [HttpGet]
+        [Authorize("Bearer")]
         [Route("revoke")]
         public IActionResult Revoke()
         {

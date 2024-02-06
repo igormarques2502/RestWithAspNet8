@@ -17,15 +17,24 @@ namespace RestWithAspNetUdemy.Repository
             _context = context;
         }
 
-        public User ValidateCredential(UserVO user)
+        public User? ValidateCredential(UserVO user)
         {
             var pass = ComputeHash(user.Password, SHA256.Create());
-            return _context.Users.FirstOrDefault(u => u.UserName == user.UserName && u.Password == pass);
+            return _context.Users.FirstOrDefault(u => (u.UserName == user.UserName) && (u.Password == pass));
         }
 
-        public User ValidateCredential(string username)
+        public User? ValidateCredential(string userName)
         {
-            return _context.Users.SingleOrDefault(u => u.UserName == username);
+            return _context.Users.SingleOrDefault(u => (u.UserName == userName));
+        }
+
+        public bool RevokeToken(string userName)
+        {
+            var user = _context.Users.SingleOrDefault(u => (u.UserName == userName));
+            if (user is null) return false;
+            user.RefreshToken = null;
+            _context.SaveChanges();
+            return true;
         }
 
         public User? RefreshUserInfo(User user)
@@ -49,30 +58,18 @@ namespace RestWithAspNetUdemy.Repository
             return result;
         }
 
-        public bool RevokeToken(string username)
-        {
-            var user = _context.Users.SingleOrDefault(u => (u.UserName == username));
-            if (user == null) return false;
-            user.RefreshToken = null;
-            _context.SaveChanges();
-            return true;
-        }
-
         private string ComputeHash(string input, HashAlgorithm algorithm)
         {
-            Byte[] inputBytes = Encoding.UTF8.GetBytes(input);
-            Byte[] hashedBytes = algorithm.ComputeHash(inputBytes);
+            byte[] inputBytes = Encoding.UTF8.GetBytes(input);
+            byte[] hashedBytes = algorithm.ComputeHash(inputBytes);
 
-            var sBuilder = new StringBuilder();
+            var builder = new StringBuilder();
 
             foreach (var item in hashedBytes)
             {
-                sBuilder.Append(item.ToString("x2"));
+                builder.Append(item.ToString("x2"));
             }
-
-            return sBuilder.ToString();
+            return builder.ToString();
         }
-
-
     }
 }

@@ -4,10 +4,12 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Rewrite;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using MySqlConnector;
+using RestWithASPNETErudio.Services.Implementations;
 using RestWithAspNetUdemy.Business;
 using RestWithAspNetUdemy.Business.Implementations;
 using RestWithAspNetUdemy.Configurations;
@@ -111,9 +113,12 @@ builder.Services.AddSingleton(filterOptions);
 builder.Services.AddApiVersioning();
 
 //Dependency Injection
+builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+
 builder.Services.AddScoped<IPersonBusiness, PersonBusiness>();
 builder.Services.AddScoped<IBookBusiness, BookBusiness>();
 builder.Services.AddScoped<ILoginBusiness, LoginBusiness>();
+builder.Services.AddScoped<IFileBusiness, FileBusiness>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IPersonRepository, PersonRepository>();
 
