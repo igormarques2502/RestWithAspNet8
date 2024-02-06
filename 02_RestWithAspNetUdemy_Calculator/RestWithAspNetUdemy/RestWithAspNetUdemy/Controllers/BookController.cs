@@ -1,12 +1,15 @@
 using Asp.Versioning;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using RestWithAspNetUdemy.Model;
+using RestWithAspNetUdemy.Data.VO;
+using RestWithAspNetUdemy.Hypermedia.Filters;
 using RestWithAspNetUdemy.Services;
 
 namespace RestWithAspNetUdemy.Controllers
 {
     [ApiVersion("1")]
     [ApiController]
+    [Authorize("Bearer")]
     [Route("api/[controller]/v{version:apiVersion}")]
     public class BookController : ControllerBase
     {
@@ -20,12 +23,22 @@ namespace RestWithAspNetUdemy.Controllers
         }
 
         [HttpGet]
+        [ProducesResponseType(200, Type = typeof(List<BookVO>))]
+        [ProducesResponseType(204)]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(401)]
+        [TypeFilter(typeof(HyperMediaFilter))]
         public IActionResult Get()
         {
             return Ok(_bookBusiness.FindAll());
         }
 
         [HttpGet("{id}")]
+        [ProducesResponseType(200, Type = typeof(BookVO))]
+        [ProducesResponseType(204)]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(401)]
+        [TypeFilter(typeof(HyperMediaFilter))]
         public IActionResult Get(long id)
         {
             var Book = _bookBusiness.FindById(id);
@@ -37,7 +50,13 @@ namespace RestWithAspNetUdemy.Controllers
         }
 
         [HttpPost]
-        public IActionResult Post([FromBody]Book Book)
+        [ProducesResponseType(200, Type = typeof(BookVO))]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(401)]
+        [TypeFilter(typeof(HyperMediaFilter))]
+        [TypeFilter(typeof(HyperMediaFilter))]
+        [TypeFilter(typeof(HyperMediaFilter))]
+        public IActionResult Post([FromBody]BookVO Book)
         {
             if (Book == null)
             {
@@ -47,7 +66,12 @@ namespace RestWithAspNetUdemy.Controllers
         }
 
         [HttpPut]
-        public IActionResult Put([FromBody] Book Book)
+        [ProducesResponseType(200, Type = typeof(BookVO))]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(401)]
+        [TypeFilter(typeof(HyperMediaFilter))]
+        [TypeFilter(typeof(HyperMediaFilter))]
+        public IActionResult Put([FromBody] BookVO Book)
         {
             if (Book == null)
             {
@@ -57,6 +81,9 @@ namespace RestWithAspNetUdemy.Controllers
         }
 
         [HttpDelete("{id}")]
+        [ProducesResponseType(204)]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(401)]
         public IActionResult Delete(long id)
         {
             _bookBusiness.Delete(id);

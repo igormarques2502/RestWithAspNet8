@@ -46,3 +46,15 @@ D:\Curso RestAPI\RestWithAspNetErudio8\RestWithAspNet8\02_RestWithAspNetUdemy_Ca
 D:\Curso RestAPI\RestWithAspNetErudio8\RestWithAspNet8\02_RestWithAspNetUdemy_Calculator\RestWithAspNetUdemy\RestWithAspNetUdemy\bin\Debug\net8.0\Serilog.Sinks.Console.dll
 D:\Curso RestAPI\RestWithAspNetErudio8\RestWithAspNet8\02_RestWithAspNetUdemy_Calculator\RestWithAspNetUdemy\RestWithAspNetUdemy\bin\Debug\net8.0\Serilog.Sinks.Debug.dll
 D:\Curso RestAPI\RestWithAspNetErudio8\RestWithAspNet8\02_RestWithAspNetUdemy_Calculator\RestWithAspNetUdemy\RestWithAspNetUdemy\bin\Debug\net8.0\Serilog.Sinks.File.dll
+D:\Curso RestAPI\RestWithAspNetErudio8\RestWithAspNet8\02_RestWithAspNetUdemy_Calculator\RestWithAspNetUdemy\RestWithAspNetUdemy\bin\Debug\net8.0\Microsoft.OpenApi.dll
+D:\Curso RestAPI\RestWithAspNetErudio8\RestWithAspNet8\02_RestWithAspNetUdemy_Calculator\RestWithAspNetUdemy\RestWithAspNetUdemy\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\Curso RestAPI\RestWithAspNetErudio8\RestWithAspNet8\02_RestWithAspNetUdemy_Calculator\RestWithAspNetUdemy\RestWithAspNetUdemy\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\Curso RestAPI\RestWithAspNetErudio8\RestWithAspNet8\02_RestWithAspNetUdemy_Calculator\RestWithAspNetUdemy\RestWithAspNetUdemy\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\Curso RestAPI\RestWithAspNetErudio8\RestWithAspNet8\02_RestWithAspNetUdemy_Calculator\RestWithAspNetUdemy\RestWithAspNetUdemy\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Curso RestAPI\RestWithAspNetErudio8\RestWithAspNet8\02_RestWithAspNetUdemy_Calculator\RestWithAspNetUdemy\RestWithAspNetUdemy\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+D:\Curso RestAPI\RestWithAspNetErudio8\RestWithAspNet8\02_RestWithAspNetUdemy_Calculator\RestWithAspNetUdemy\RestWithAspNetUdemy\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Curso RestAPI\RestWithAspNetErudio8\RestWithAspNet8\02_RestWithAspNetUdemy_Calculator\RestWithAspNetUdemy\RestWithAspNetUdemy\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+D:\Curso RestAPI\RestWithAspNetErudio8\RestWithAspNet8\02_RestWithAspNetUdemy_Calculator\RestWithAspNetUdemy\RestWithAspNetUdemy\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+D:\Curso RestAPI\RestWithAspNetErudio8\RestWithAspNet8\02_RestWithAspNetUdemy_Calculator\RestWithAspNetUdemy\RestWithAspNetUdemy\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Curso RestAPI\RestWithAspNetErudio8\RestWithAspNet8\02_RestWithAspNetUdemy_Calculator\RestWithAspNetUdemy\RestWithAspNetUdemy\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+D:\Curso RestAPI\RestWithAspNetErudio8\RestWithAspNet8\02_RestWithAspNetUdemy_Calculator\RestWithAspNetUdemy\RestWithAspNetUdemy\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll

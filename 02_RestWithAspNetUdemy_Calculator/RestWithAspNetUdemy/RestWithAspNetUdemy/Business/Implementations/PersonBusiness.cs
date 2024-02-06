@@ -1,4 +1,6 @@
-﻿using RestWithAspNetUdemy.Model;
+﻿using RestWithAspNetUdemy.Data.Converter.Implementations;
+using RestWithAspNetUdemy.Data.VO;
+using RestWithAspNetUdemy.Model;
 using RestWithAspNetUdemy.Repository;
 
 namespace RestWithAspNetUdemy.Services.Implementations
@@ -6,29 +8,35 @@ namespace RestWithAspNetUdemy.Services.Implementations
     public class PersonBusiness : IPersonBusiness
     {
         private readonly IRepository<Person> _repository;
+        private readonly PersonConverter _converter;
 
         public PersonBusiness(IRepository<Person> repository)
         {
             _repository = repository;
+            _converter = new PersonConverter();
         }
 
-        public List<Person> FindAll()
+        public List<PersonVO> FindAll()
         {
-            return _repository.FindAll();
+            return _converter.Parse(_repository.FindAll());
         }
-        public Person FindById(long Id)
+        public PersonVO FindById(long Id)
         {
-            return _repository.FindById(Id);
+            return _converter.Parse(_repository.FindById(Id));
         }
 
-        public Person Create(Person person)
+        public PersonVO Create(PersonVO person)
         {
-           return _repository.Create(person);
+            var personEntity = _converter.Parse(person);
+            personEntity = _repository.Create(personEntity);
+            return _converter.Parse(personEntity);
            
         }
-        public Person Update(Person person)
+        public PersonVO Update(PersonVO person)
         {
-            return _repository.Update(person);
+            var personEntity = _converter.Parse(person);
+            personEntity = _repository.Update(personEntity);
+            return _converter.Parse(personEntity);
         }
 
         public void Delete(long Id)
