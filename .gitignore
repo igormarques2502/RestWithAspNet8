@@ -4,3 +4,25 @@
 
 *.vsidx
 /02_RestWithAspNetUdemy_Calculator/RestWithAspNetUdemy/RestWithAspNetUdemy/obj/Debug/net8.0/RestWithAspNetUdemy.AssemblyInfo.cs
+*.json
+/02_RestWithAspNetUdemy_Calculator/RestWithAspNetUdemy/obj/Debug/docker-compose.dcproj.AssemblyReference.cache
+*.cache
+/02_RestWithAspNetUdemy_Calculator/RestWithAspNetUdemy/RestWithAspNetUdemy/bin/Debug/net8.0/RestWithAspNetUdemy.dll
+/02_RestWithAspNetUdemy_Calculator/RestWithAspNetUdemy/RestWithAspNetUdemy/obj/Debug/net8.0/RestWithAspNetUdemy.AssemblyInfoInputs.cache
+/02_RestWithAspNetUdemy_Calculator/RestWithAspNetUdemy/RestWithAspNetUdemy/obj/Debug/net8.0/refint/RestWithAspNetUdemy.dll
+/02_RestWithAspNetUdemy_Calculator/RestWithAspNetUdemy/RestWithAspNetUdemy/obj/Debug/net8.0/ref/RestWithAspNetUdemy.dll
+/02_RestWithAspNetUdemy_Calculator/RestWithAspNetUdemy/.vs/ProjectEvaluation/restwithaspnetudemy.metadata.v7.bin
+/02_RestWithAspNetUdemy_Calculator/RestWithAspNetUdemy/.vs/ProjectEvaluation/restwithaspnetudemy.projects.v7.bin
+/02_RestWithAspNetUdemy_Calculator/RestWithAspNetUdemy/.vs/RestWithAspNetUdemy/DesignTimeBuild/.dtbcache.v2
+/02_RestWithAspNetUdemy_Calculator/RestWithAspNetUdemy/.vs/RestWithAspNetUdemy/v17/.futdcache.v2
+/02_RestWithAspNetUdemy_Calculator/RestWithAspNetUdemy/.vs/RestWithAspNetUdemy/v17/.suo
+/02_RestWithAspNetUdemy_Calculator/RestWithAspNetUdemy/bin/Debug/Asp.Versioning.Abstractions.dll
+*.dll
+/02_RestWithAspNetUdemy_Calculator/RestWithAspNetUdemy/bin/Debug/RestWithAspNetUdemy.exe
+/02_RestWithAspNetUdemy_Calculator/RestWithAspNetUdemy/bin/Debug/RestWithAspNetUdemy.pdb
+*.CopyComplete
+*.txt
+/02_RestWithAspNetUdemy_Calculator/RestWithAspNetUdemy/RestWithAspNetUdemy/bin/Debug/net8.0/appsettings.json
+/02_RestWithAspNetUdemy_Calculator/RestWithAspNetUdemy/RestWithAspNetUdemy/bin/Debug/net8.0/RestWithAspNetUdemy.deps.json
+/02_RestWithAspNetUdemy_Calculator/RestWithAspNetUdemy/RestWithAspNetUdemy/bin/Debug/net8.0/RestWithAspNetUdemy.exe
+/02_RestWithAspNetUdemy_Calculator/RestWithAspNetUdemy/RestWithAspNetUdemy/bin/Debug/net8.0/RestWithAspNetUdemy.pdb
