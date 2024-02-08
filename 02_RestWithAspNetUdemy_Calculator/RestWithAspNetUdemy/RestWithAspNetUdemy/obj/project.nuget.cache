@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "wQ9c6wzZyyEcggWM4QVhh1hsgLvg75X5Dw31O4k3gzzywqIrLdKSm4n1CpNa2HdDAbjx1t6U+XyWlg0gESe+FA==",
+  "dgSpecHash": "F/3U7eaz2wfc6aBlNLscosMAsmUhBM2SoYOsFKTbcf1wPJ3sZkUwOBx3fnIlrpdNjeszIXct+zxxDYB/qEiW/A==",
   "success": true,
   "projectFilePath": "D:\\Curso RestAPI\\RestWithAspNetErudio8\\RestWithAspNet8\\02_RestWithAspNetUdemy_Calculator\\RestWithAspNetUdemy\\RestWithAspNetUdemy\\RestWithAspNetUdemy.csproj",
   "expectedPackageFiles": [
@@ -35,6 +35,7 @@
     "C:\\Users\\Igor Marques\\.nuget\\packages\\microsoft.identitymodel.protocols.openidconnect\\7.1.2\\microsoft.identitymodel.protocols.openidconnect.7.1.2.nupkg.sha512",
     "C:\\Users\\Igor Marques\\.nuget\\packages\\microsoft.identitymodel.tokens\\7.1.2\\microsoft.identitymodel.tokens.7.1.2.nupkg.sha512",
     "C:\\Users\\Igor Marques\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\Igor Marques\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.19.5\\microsoft.visualstudio.azure.containers.tools.targets.1.19.5.nupkg.sha512",
     "C:\\Users\\Igor Marques\\.nuget\\packages\\mysqlconnector\\2.2.5\\mysqlconnector.2.2.5.nupkg.sha512",
     "C:\\Users\\Igor Marques\\.nuget\\packages\\pomelo.entityframeworkcore.mysql\\7.0.0\\pomelo.entityframeworkcore.mysql.7.0.0.nupkg.sha512",
     "C:\\Users\\Igor Marques\\.nuget\\packages\\serilog\\3.1.1\\serilog.3.1.1.nupkg.sha512",
