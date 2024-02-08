@@ -3,3 +3,4 @@
 ################################################################################
 
 *.vsidx
+/02_RestWithAspNetUdemy_Calculator/RestWithAspNetUdemy/RestWithAspNetUdemy/obj/Debug/net8.0/RestWithAspNetUdemy.AssemblyInfo.cs
